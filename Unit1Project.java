@@ -21,9 +21,8 @@ public class Unit1Project {
 	//all changes within phases
 	static double TempChanges() {
 		double tempChange = 0;
-		if (phase[0][2].equals(phase[3][0])) {f = 0;}
-		if (phase[0][2].equals(phase[3][1])) {f = 1;}
-		if (phase[0][2].equals(phase[3][2])) {f = 2;}
+		for (int i = 0; i < 3; i++) {
+		if (phase[0][2].equals(phase[3][i])) {f = i;}}
 		if (temp[0]<temp[1]) {tempChange=roundTo3((Math.min(temp[1], tempBoundaries[f][1])-Math.max(temp[0], tempBoundaries[f][0])));}
 		if (temp[0]>temp[1]) {tempChange=roundTo3((Math.max(temp[1],tempBoundaries[f][0])-Math.min(temp[0], tempBoundaries[f][1])));}
 		temp[2]+=tempChange;
