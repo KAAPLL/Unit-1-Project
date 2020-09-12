@@ -53,7 +53,7 @@ public class Unit1Project {
 		temp[2]=temp[0];
 		for (int i=0; i<3; i++) {
 			if (temp[i] < 0) {phase[0][i] = phase[3][0];}
-			if (temp[i] >= 0 && temp[0] <= 100) {phase[0][i] = phase[3][1];}
+			if (temp[i] >= 0 && temp[i] <= 100) {phase[0][i] = phase[3][1];}
 			if (temp[i] > 100) {phase[0][i] = phase[3][2];}}
 		String p1 = "We will be ";
 		String p2 = phase[2][0];
